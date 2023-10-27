@@ -12,6 +12,9 @@
                 return parseFloat(a) + parseFloat(b) + parseFloat(c);
             }
             function terulet(a, b, c) {
+                a = parseFloat(a);
+                b = parseFloat(b);
+                c = parseFloat(c);
                 const s = (a + b + c) / 2;
                 return Math.sqrt(s * (s - a) * (s - b) * (s - c));
             }
@@ -33,9 +36,9 @@
 <body>
     <h1>Itt kiszámolhatod a háromszög kerületét és területét</h1>
     <p>Add meg kérlek a háromszög oldalainak hosszúságát:</p>
-    <input type="number" id="aOldal">
-    <input type="number" id="bOldal">
-    <input type="number" id="cOldal">
+    <input type="number" min="0.01" step="0.01" id="aOldal">
+    <input type="number" min="0.01" step="0.01" id="bOldal">
+    <input type="number" min="0.01" step="0.01" id="cOldal">
     <button id="szamit">Számíts</button>
     <p id="eredmeny">Itt látod majd az eredményt.</p>
 </body>
