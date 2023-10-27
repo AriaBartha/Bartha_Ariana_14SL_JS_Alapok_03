@@ -25,6 +25,12 @@
                         document.getElementById('paragraph').innerHTML = "Nagyobb számra gondoltam";
                     }
                 }
+
+                const ujTippGomb = document.getElementById('newNumber');
+                ujTippGomb.addEventListener("click", () => {
+                    gondoltSzam = veletlenSzam(1, 100);
+                    document.getElementById('secondParagraph').innerHTML = "Gondoltam! Próbálkozhatsz megint!"
+                })
             })
         }
 
@@ -37,8 +43,8 @@
     <p id="paragraph">Szerinted melyik az?</p>
     <input id="guess" type="number">
     <button id="checkNumber">Lássuk</button>
-    <p>Gondoljak egy másik számra?</p>
-    <button id="newNumber" onclick="generateNewNumber()">Igen</button>
+    <p id="secondParagraph">Gondoljak egy másik számra?</p>
+    <button id="newNumber">Igen</button>
 </body>
 
 </html>
