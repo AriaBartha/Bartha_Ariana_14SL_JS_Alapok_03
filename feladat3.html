@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Alapok 3. - 3. feladat</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+        function init() {
+            const koszontGomb = document.getElementById('greeting');
+            koszontGomb.addEventListener("click", () => {
+                const most = new Date(Date.now()).toString();
+                console.log(most);
+            })
+        }
+    </script>
 </head>
 
 <body>
