@@ -5,7 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Alapok 3. - 1. feladat</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", init);
+        function init() {
 
+            function veletlenSzam(min, max) {
+                return Math.trunc(Math.random() * (max - min + 1)) + min;
+            }
+            let gondoltSzam = veletlenSzam(1, 100);
+
+        }
+    </script>
 </head>
 
 <body>
