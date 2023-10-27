@@ -11,6 +11,10 @@
             function kerulet(a, b, c) {
                 return parseFloat(a) + parseFloat(b) + parseFloat(c);
             }
+            function terulet(a, b, c) {
+                const s = (a + b + c) / 2;
+                return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            }
             const keruletGomb = document.getElementById('kerulet');
             keruletGomb.addEventListener("click", () => {
                 const aOldal = document.getElementById('aOldal').value;
@@ -31,8 +35,7 @@
     <input type="number" id="aOldal">
     <input type="number" id="bOldal">
     <input type="number" id="cOldal">
-    <button id="kerulet">Kerület</button>
-    <button id="terulet">Terület</button>
+    <button id="szamit">Számíts</button>
     <p id="eredmeny">Itt látod majd az eredményt.</p>
 </body>
 
