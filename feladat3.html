@@ -12,7 +12,18 @@
             koszontGomb.addEventListener("click", () => {
                 const today = new Date();
                 const hours = today.getHours();
-                console.log(hours);
+                if (hours < 10) {
+                    alert("Jó reggelt!");
+                }
+                else if (hours >= 10 && hours <= 17) {
+                    alert("Jó napot!");
+                }
+                else if (hours >= 18 && hours < 21) {
+                    alert("Jó estét!");
+                }
+                else {
+                    alert("Jó éjszakát!");
+                }
             })
         }
     </script>
