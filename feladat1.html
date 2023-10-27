@@ -13,16 +13,30 @@
                 return Math.trunc(Math.random() * (max - min + 1)) + min;
             }
             let gondoltSzam = veletlenSzam(1, 100);
-
+            const tippGomb = document.getElementById('checkNumber');
+            tippGomb.addEventListener("click", () => {
+                const tipp = document.getElementById('guess').value;
+                if (tipp == gondoltSzam) {
+                    document.getElementById('paragraph').innerHTML = "Eltaláltad";
+                } else {
+                    if (tipp > gondoltSzam) {
+                        document.getElementById('paragraph').innerHTML = "Kissebb számra gondoltam";
+                    } else {
+                        document.getElementById('paragraph').innerHTML = "Nagyobb számra gondoltam";
+                    }
+                }
+            })
         }
+
+
     </script>
 </head>
 
 <body>
-    <h1>Gondoltam egy számra</h1>
-    <p>Szerinted melyik az?</p>
+    <h1>Gondoltam egy számra 1 és 100 között.</h1>
+    <p id="paragraph">Szerinted melyik az?</p>
     <input id="guess" type="number">
-    <button id="checkNumber" onclick="letsCheck()">Lássuk</button>
+    <button id="checkNumber">Lássuk</button>
     <p>Gondoljak egy másik számra?</p>
     <button id="newNumber" onclick="generateNewNumber()">Igen</button>
 </body>
