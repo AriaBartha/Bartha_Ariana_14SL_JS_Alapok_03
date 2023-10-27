@@ -21,7 +21,8 @@
                 const bOldal = document.getElementById('bOldal').value;
                 const cOldal = document.getElementById('cOldal').value;
                 const keruletEredmeny = kerulet(aOldal, bOldal, cOldal);
-                document.getElementById('eredmeny').innerHTML = "A hármoszög kerülete: " + keruletEredmeny;
+                const teruletEredmeny = terulet(aOldal, bOldal, cOldal);
+                document.getElementById('eredmeny').innerHTML = "A hármoszög kerülete: " + keruletEredmeny + " A háromszög területe: " + teruletEredmeny;
             });
 
         }
