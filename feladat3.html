@@ -10,8 +10,9 @@
         function init() {
             const koszontGomb = document.getElementById('greeting');
             koszontGomb.addEventListener("click", () => {
-                const most = new Date(Date.now()).toString();
-                console.log(most);
+                const today = new Date();
+                const hours = today.getHours();
+                console.log(hours);
             })
         }
     </script>
